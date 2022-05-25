@@ -1,0 +1,272 @@
+
+# Creado por https://www.toptal.com/developers/gitignore/api/react,windows,node,webstorm+all
+# Editar en https://www.toptal.com/developers/gitignore?templates=react,windows,node,webstorm+all
+
+### Nodo ###
+# Registros
+registros
+*.Iniciar sesión
+npm-debug.log*
+hilo-debug.log*
+hilo-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Informes de diagnóstico (https://nodejs.org/api/report.html)
+informe.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# datos de tiempo de ejecución
+pids
+*.pid
+*.semilla
+*.pid.lock
+
+# Directorio para bibliotecas instrumentadas generadas por jscoverage/JSCover
+lib-cov
+
+# Directorio de cobertura utilizado por herramientas como estambul
+cobertura
+*.lcov
+
+# cobertura de prueba de Nueva York
+.nyc_salida
+
+# Almacenamiento intermedio de Grunt (https://gruntjs.com/creating-plugins#storing-task-files)
+.gruñido
+
+# Directorio de dependencias de Bower (https://bower.io/)
+Bower_components
+
+# configuración de nodo-waf
+.lock-wscript
+
+# Complementos binarios compilados (https://nodejs.org/api/addons.html)
+construir/lanzamiento
+
+# directorios de dependencia
+node_modules/
+jspm_paquetes/
+
+# Directorio de dependencias de Snowpack (https://snowpack.dev/)
+módulos_web/
+
+# Caché de mecanografiado
+*.tsbuildinfo
+
+# Directorio de caché npm opcional
+.npm
+
+# Caché eslint opcional
+.eslintcache
+
+# Caché de estilo opcional
+.stylelintcache
+
+# Caché de micropaquetes
+.rpt2_caché/
+.rts2_caché_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Historial de REPL opcional
+.node_repl_history
+
+# Salida de 'paquete npm'
+*.tgz
+
+# Archivo de integridad del hilo
+.integridad del hilo
+
+# archivos de variables de entorno dotenv
+.env
+.env.desarrollo.local
+.env.test.local
+.env.producción.local
+.env.local
+
+# caché del empaquetador de paquetes (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Salida de compilación de Next.js
+.Siguiente
+afuera
+
+# Nuxt.js construir/generar salida
+.nuxt
+dist
+
+# archivos Gatsby
+.cache/
+# Comenta en la línea pública si tu proyecto usa Gatsby y no Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# público
+
+# salida de compilación de vuepress
+.vuepress/dist
+
+# vuepress v2.x directorio temporal y caché
+.temperatura
+
+# Caché de Docusaurus y archivos generados
+.docusaurus
+
+# directorios sin servidor
+.sin servidor/
+
+# Caché de FuseBox
+.caja de fusibles/
+
+# Archivos locales de DynamoDB
+.dynamodb/
+
+# archivo de puerto TernJS
+.tern-puerto
+
+# Almacena las versiones de VSCode utilizadas para probar las extensiones de VSCode
+.vscode-prueba
+
+# hilo v2
+.hilo/caché
+.hilo/desenchufado
+.yarn/construir-estado.yml
+.yarn/estado-de-instalación.gz
+.pnp.*
+
+### Parche de nodo ###
+# Directorios de paquetes web sin servidor
+.paquete web/
+
+# Caché de estilo opcional
+
+# SvelteKit construir/generar salida
+.svelte-kit
+
+### reaccionar ###
+.DS_*
+**/*.respaldo.*
+**/*.espalda.*
+
+node_modules
+
+*.sublime*
+
+psd
+pulgar
+bosquejo
+
+### WebStorm+todas ###
+# Cubre los IDE de JetBrains: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm y Rider
+# Referencia: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Cosas específicas del usuario
+.idea/**/espacio de trabajo.xml
+.idea/**/tareas.xml
+.idea/**/uso.estadísticas.xml
+.idea/**/diccionarios
+.idea/**/estante
+
+# Específico del usuario de AWS
+.idea/**/aws.xml
+
+# archivos generados
+.idea/**/contentModel.xml
+
+# Archivos confidenciales o de alta rotación
+.idea/**/fuentes de datos/
+.idea/**/fuentes de datos.ids
+.idea/**/fuentes de datos.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dinámica.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+#Gradle
+.idea/**/gradle.xml
+.idea/**/bibliotecas
+
+# Gradle y Maven con importación automática
+# Al usar Gradle o Maven con importación automática, debe excluir los archivos del módulo,
+# ya que se volverán a crear y pueden causar abandono. Descomente si usa
+# importación automática.
+# .idea/artefactos
+# .idea/compilador.xml
+# .idea/jarRepositories.xml
+# .idea/modulos.xml
+# .idea/*.iml
+# .idea/módulos
+# *.iml
+# *.ipr
+
+# CHacer
+cmake-construir-*/
+
+# Complemento Mongo Explorer
+.idea/**/mongoConfiguraciones.xml
+
+# Formato de proyecto basado en archivos
+*.iws
+
+#IntelliJ
+afuera/
+
+# Complemento mpeltonen/sbt-idea
+.idea_modules/
+
+# Complemento JIRA
+atlassian-ide-plugin.xml
+
+# Complemento de Clojure cursiva
+.idea/replstate.xml
+
+# Complemento SonarLint
+.idea/sonarlint/
+
+# Complemento Crashlytics (para Android Studio e IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.propiedades
+crashlytics-build.propiedades
+tela.propiedades
+
+# Cliente de reposo basado en editor
+.idea/httpRequests
+
+# Android studio 3.1+ archivo de caché serializado
+.idea/caches/build_file_checksums.ser
+
+### WebStorm+todos los parches ###
+# Ignorar todo menos la configuración de estilo de código y ejecutar configuraciones
+# que se supone que se comparten dentro de los equipos.
+
+.ocurrencia/*
+
+!.idea/estilos de código
+!.idea/runConfiguraciones
+
+### Ventanas ###
+# Archivos de caché de miniaturas de Windows
+Pulgares.db
+Thumbs.db: encriptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Volcar archivo
+*.stackdump
+
+# archivo de configuración de la carpeta
+[Dd]esktop.ini
+
+# Papelera de reciclaje utilizada en archivos compartidos
+$RECICLAJE.BIN/
+
+# archivos del instalador de Windows
+*.taxi
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Atajos de Windows
+*.lnk
+
+# Fin de https://www.toptal.com/developers/gitignore/api/react,windows,node,webstorm+all

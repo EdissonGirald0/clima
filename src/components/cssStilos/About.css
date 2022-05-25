@@ -1,0 +1,19 @@
+.container {
+    background-size: 100%;
+    justify-content: center;
+}
+.edisson {
+    margin-top: 4rem;
+    size: 20rem;
+    color: #b03911;
+
+}
+.fotor {
+    border-radius: 50%;
+    margin: 3rem;
+}
+.info {
+    border-style: solid;
+    border: darkorange;
+    box-shadow: darkred;
+}

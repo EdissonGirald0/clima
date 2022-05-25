@@ -1,0 +1,12 @@
+html{
+  background-color: black;
+}
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
