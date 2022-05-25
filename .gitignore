@@ -160,6 +160,7 @@ bosquejo
 # Referencia: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # Cosas específicas del usuario
+.idea
 .idea/**/espacio de trabajo.xml
 .idea/**/tareas.xml
 .idea/**/uso.estadísticas.xml
