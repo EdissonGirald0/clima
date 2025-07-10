@@ -1,21 +1,228 @@
 .card {
   margin: 20px;
-  width: 18rem;
-  background-color: rgba(189, 65, 2, 0.9);
+  width: 280px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.card-title {
-  margin-bottom: 15px;
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-#closeIcon {
+.card-hovered {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.card-header {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 8px;
-  margin-top: 8px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 20px 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.favorite-btn, .close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.favorite-btn:hover {
+  background: rgba(255, 192, 203, 0.3);
+  transform: scale(1.1);
+}
+
+.favorite-btn.favorited {
+  animation: heartBeat 0.6s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+  transform: scale(1.1);
+}
+
+.weather-emoji {
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
 }
 
 .card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
+  padding: 0 20px 20px;
+}
+
+.city-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.city-link:hover {
+  color: var(--temp-color);
+}
+
+.card-title {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.temperature-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.temp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.temp-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.temp-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.min-temp {
+  color: var(--temp-color-light);
+}
+
+.max-temp {
+  color: var(--temp-color);
+}
+
+.weather-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.card:hover .weather-img {
+  transform: scale(1.1);
+}
+
+.card-footer {
+  margin-top: 15px;
+}
+
+.weather-indicator {
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.temp-bar {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .temp-value {
+    font-size: 1rem;
+  }
+  
+  .weather-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.9) 0%, rgba(60, 60, 60, 0.7) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-title {
+    color: #fff;
+  }
+  
+  .temp-value {
+    color: #fff;
+  }
+  
+  .temp-label {
+    color: #ccc;
+  }
 }
