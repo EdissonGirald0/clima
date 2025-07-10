@@ -1,5 +1,14 @@
 # Clima Mundial
 
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-61dafb?logo=react&logoColor=white" alt="React"/>
+  <img src="https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/React_Router-6.x-CA4245?logo=react-router&logoColor=white" alt="React Router"/>
+  <img src="https://img.shields.io/badge/OpenWeatherMap-API-orange?logo=OpenWeatherMap&logoColor=white" alt="OpenWeatherMap"/>
+  <img src="https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel" alt="Vercel"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"/>
+</p>
+
 Aplicación web moderna para consultar el clima actual de ciudades alrededor del mundo usando la API de OpenWeatherMap.
 
 ## Tabla de Contenidos
@@ -158,3 +167,66 @@ clima/
 ---
 
 **Desarrollado por Edisson Giraldo** 
+
+---
+
+## 🏗️ Arquitectura del Proyecto
+
+```mermaid
+flowchart TD
+    A[Usuario] -- Navegador --> B[App React Vercel]
+    B -- Fetch --> C[API OpenWeatherMap]
+    B -- LocalStorage --> D[Ciudades Favoritas]
+    B -- SPA Routing --> E[React Router]
+    B -- UI --> F[Componentes: Nav, Cards, Ciudad, About]
+    F -- Usa --> G[Forecast, SearchBar, LoadingSpinner]
+    B -- Estilos --> H[CSS Modules]
+```
+
+---
+
+## 🧩 Diagrama de Componentes
+
+```mermaid
+flowchart TD
+    App --> Nav
+    App --> Cards
+    App --> About
+    App --> CityWrapper
+    Cards --> Card
+    Card --> Forecast
+    Card --> SearchBar
+    CityWrapper --> Ciudad
+    Ciudad --> Forecast
+    Nav --> SearchBar
+```
+
+---
+
+## 🔄 Flujo de Datos
+
+```mermaid
+sequenceDiagram
+    participant User as Usuario
+    participant UI as App React
+    participant API as OpenWeatherMap
+    User->>UI: Busca ciudad / geolocalización
+    UI->>API: fetchWeatherByCity / fetchWeatherByCoords
+    API-->>UI: Datos del clima
+    UI->>User: Renderiza Cards y Ciudad
+    User->>UI: Marca favorito / elimina ciudad
+    UI->>LocalStorage: Actualiza favoritos
+```
+
+---
+
+## 🚀 Diagrama de Despliegue CI/CD
+
+```mermaid
+graph TD
+    Dev[Desarrollador] -->|Push a GitHub| Repo[Repositorio GitHub]
+    Repo -->|Deploy automático| Vercel[Vercel Build & Deploy]
+    Vercel -->|App publicada| UsuarioFinal[Usuario Final]
+```
+
+--- 
